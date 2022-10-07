@@ -10,7 +10,6 @@ import { useEffect, useState} from "react";
 function App() {
 
   const [user, setUser ] = useState(null)
-
   useEffect(() => {
     const getUser = async () => {
       fetch('http://localhost:5000/auth/login/success', {
