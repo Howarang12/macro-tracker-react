@@ -10,7 +10,7 @@ const Navbar = ({user}) => {
     <nav className="navbar navbar-expand-md navbar-light  py-3">
       <div className="container-fluid">
       <Link to="/" className="navbar-brand">
-        <span className="fw-bold text-dark">
+        <span className="fw-bold text-muted display-5">
           MacroMate
         </span>
       </Link>

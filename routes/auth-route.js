@@ -26,8 +26,9 @@ router.post('/register', (req, res) => {
 
 
 
-router.get('/user', (req, res) => {
-  console.log(req.body)
+router.get('/users', async (req, res) => {
+  let users = await User.find()
+  res.json(users)
 })
 
 router.get('/login/success', (req, res) => {

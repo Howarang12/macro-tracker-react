@@ -68,8 +68,7 @@ const Login = () => {
         </div>
       </form>
       <p className="lead mt-5 text-center">
-        Not a member? 
-        <Link to="/register">Sign Up</Link>
+        Not a member? <Link to="/register">Sign Up</Link>
       </p>
   </div>
   );
