@@ -31,7 +31,7 @@ const Navbar = ({user}) => {
                <Link to="/nutrition" className="nav-link text-dark">Nutrition</Link>
               </li>
               <li className="nav-item lead">
-                <Link to="" className="nav-link text-dark">Profile</Link>
+                <Link to="/profile" className="nav-link text-dark">Profile</Link>
               </li>
               <li className="nav-item px-2 lead">
                 <button  className="btn btn-sm btn-secondary nav-link text-light" onClick={logout}>Logout</button>

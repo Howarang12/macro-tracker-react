@@ -1,10 +1,12 @@
+import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { useEffect, useState} from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Post from "./pages/Post";
-import {BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import { useEffect, useState} from "react";
+import Nutrition from "./pages/Nutrition";
+import Profile from "./pages/Profile"
 
 
 function App() {
@@ -48,6 +50,14 @@ function App() {
           <Route 
             path="/register" 
             element={<Register/>}
+          />
+          <Route 
+            path="/nutrition" 
+            element={<Nutrition/>}
+          />
+          <Route 
+            path="/profile" 
+            element={<Profile />}
           />
           <Route 
             path="/post/:id" 
