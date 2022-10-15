@@ -1,11 +1,12 @@
 import { useState } from "react"
+import Food from "../components/Food"
 
 const Nutrition = () => {
   const [searchText, setSearchText] = useState('')
   const [foods, setFoods] = useState([])
 
   const params = {
-    api_key: process.env.REACT_APP_API_KEY,
+    api_key: 'kSoKHldy0rVKdhIIBnitlmMwqtXUlRvybKvcCH9s',
     query: searchText,
     dataType: ['Survey (FNDDS)'],
     pagesize: 24
@@ -18,10 +19,9 @@ const Nutrition = () => {
     try{
       const response = await fetch(api_url)
       const data = await response.json()
-      const foods = data.foods
       
-      setFoods(foods)
-      console.log(foods)
+      setFoods(data.foods)
+      console.log(foods[0].description)
     } catch(err) {
       console.log(err)
     }
@@ -49,6 +49,9 @@ const Nutrition = () => {
         </div>
         </div>
       </form>
+      <div className="row">
+        {foods.map((food) => <Food key={food.fdcId} food={food}/> )}
+      </div>
     </div>
   )
 }
